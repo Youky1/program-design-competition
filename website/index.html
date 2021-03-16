@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/dist/main.css">
+</head>
+<body>
+    <!-- Header部分，进行功能选择，跳转页面的显示内容 -->
+    <header>
+        <!-- logo&title -->
+        <div id="logoContainer">
+            <img src="./static/logo.png">
+            <h1>title</h1>
+        </div>
+
+        <!-- 功能导航栏 -->
+        <nav>
+            <div class="menuItem" onclick="handlePageChange(0)">1</div>
+            <div class="menuItem" onclick="handlePageChange(1)">2</div>
+            <div class="menuItem" onclick="handlePageChange(2)">3</div>
+        </nav>
+    </header>
+
+    <!-- 主体内容部分，随着header中选择的选项发生变化 -->
+    <div id="mainContainer">
+        <div class="page">1</div>
+        <div class="page">2</div>
+        <div class="page">3</div>
+    </div>
+
+
+    <!-- 引入js文件 -->
+    <script src="./js/lib/jQuery.js"></script>
+    <script src="./js/lib/mapv.js"></script>
+    <script src="./js/lib/qwebchannel.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
