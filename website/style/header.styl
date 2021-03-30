@@ -1,0 +1,41 @@
+headerHeight = 10vh
+flex()
+    display flex
+    align-items center
+// 首部header的样式
+header 
+    height headerHeight
+    width 100vw
+    background-color #1d374c
+    flex()
+
+#logoContainer
+    flex()
+    width 50vw
+    #logo
+        height headerHeight
+        margin-right 1vw
+    #title
+        color #eee
+        font-size 22px
+
+nav 
+    flex()
+    height headerHeight
+    width 30vw
+    margin-left 10vw
+    justify-content space-around
+    .menuItem
+        height 100%
+        width 10vw
+        font-size 18px
+        flex()
+        justify-content center
+        color #cecece
+        &:hover
+            color #ffffff
+            background-color #40617c
+            cursor pointer
+        span
+            margin-right 6px
+            font-size 22px

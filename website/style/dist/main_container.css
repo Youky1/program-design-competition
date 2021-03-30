@@ -1,0 +1,14 @@
+#mainContainer {
+  height: 90vh;
+}
+#mainContainer #gridPage {
+  display: none;
+}
+#mainContainer .page {
+  height: 90vh;
+}
+#mainContainer .page #map {
+  height: 90vh;
+  padding: 0;
+  margin: 0;
+}

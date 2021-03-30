@@ -1,0 +1,46 @@
+header {
+  height: 10vh;
+  width: 100vw;
+  background-color: #1d374c;
+  display: flex;
+  align-items: center;
+}
+#logoContainer {
+  display: flex;
+  align-items: center;
+  width: 50vw;
+}
+#logoContainer #logo {
+  height: 10vh;
+  margin-right: 1vw;
+}
+#logoContainer #title {
+  color: #eee;
+  font-size: 22px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  width: 30vw;
+  margin-left: 10vw;
+  justify-content: space-around;
+}
+nav .menuItem {
+  height: 100%;
+  width: 10vw;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cecece;
+}
+nav .menuItem:hover {
+  color: #fff;
+  background-color: #40617c;
+  cursor: pointer;
+}
+nav .menuItem span {
+  margin-right: 6px;
+  font-size: 22px;
+}

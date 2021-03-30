@@ -4,39 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ENRS-智慧船舶航行风险提示系统</title>
+
+    <!-- 引入iconfont样式文件 -->
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2452906_sh39xwdmz0d.css">
+
+    <!-- 引入自定义样式文件 -->
     <link rel="stylesheet" href="./style/dist/main.css">
+    <link rel="stylesheet" href="./style/dist/header.css">
+    <link rel="stylesheet" href="./style/dist/main_container.css">
+
+    <!-- 引入jQuery -->
+    <script src="./js/lib/jquery.js"></script>
+
+    <!-- 引入mapv -->
+    <script src="./js/lib/getscript.js"></script>
+    <script src="./js/lib/mapv.js"></script>
 </head>
 <body>
+
     <!-- Header部分，进行功能选择，跳转页面的显示内容 -->
     <header>
-        <!-- logo&title -->
+        <!-- Logo&Title -->
         <div id="logoContainer">
-            <img src="./static/logo.png">
-            <h1>title</h1>
+            <img id="logo" src="./static/logo.png">
+            <p id="title">
+                ENRS-智慧船舶航行风险提示系统
+                <span class="iconfont iconxitong" style="font-size: 22px;"></span>
+            </p>
         </div>
 
         <!-- 功能导航栏 -->
         <nav>
-            <div class="menuItem" onclick="handlePageChange(0)">1</div>
-            <div class="menuItem" onclick="handlePageChange(1)">2</div>
-            <div class="menuItem" onclick="handlePageChange(2)">3</div>
+            <div class="menuItem" onclick="handlePageChange(0)">
+                <span class="iconfont iconrelitu1 icon"></span>
+                历史热力图
+            </div>
+            <div class="menuItem" onclick="handlePageChange(1)">
+                <span class="iconfont iconlocus-full icon" ></span>
+                动态轨迹图
+            </div>
+            <div class="menuItem" onclick="handlePageChange(2)">
+                <span class="iconfont iconwanggehua icon" ></span>
+                水域网格化
+            </div>
         </nav>
     </header>
 
     <!-- 主体内容部分，随着header中选择的选项发生变化 -->
     <div id="mainContainer">
-        <div class="page">1</div>
-        <div class="page">2</div>
-        <div class="page">3</div>
+        <!-- 地图页面 -->
+        <div class="page" id="mapPage">
+            <!-- 地图容器 -->
+            <div id="map"></div>
+            <canvas id="canvas" style="display: none;"></canvas>
+        </div>
+
+        <!-- 水域网格化页面 -->
+        <div class="page" id="gridPage">3</div>
     </div>
+    
 
+    <!-- 引入热力图数据文件  -->
+    <script src="./js/data/heat/heatData.js"></script>
 
-    <!-- 引入js文件 -->
-    <script src="./js/lib/jQuery.js"></script>
-    <script src="./js/lib/mapv.js"></script>
-    <script src="./js/lib/qwebchannel.js"></script>
-    <script src="./js/data.js"></script>
+    <!-- 引入动态轨迹数据 -->
+    <script src="./js/data/dynamic/dynamicPointData.js"></script>
+    <script src="./js/data/dynamic/dynamicTrajectoryData.js"></script>
+
+    <!-- 引入船舶信息数据 -->
+    <script src="./js/data/dynamic/ship_info.js"></script>
+
+    <!-- 引入自定义js文件 -->
     <script src="./js/main.js"></script>
 </body>
 </html>
