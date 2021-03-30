@@ -1,3602 +1,1226 @@
-var dynamicPointData = [
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40016500000003, 30.654250000000008]
-        },
-        count: 1,
-        time: 930.0
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4002487273933, 30.654262810396705]
-        },
-        count: 1,
-        time: 931.0112359550562
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4002597654098, 30.65426449922714]
-        },
-        count: 1,
-        time: 932.0224719101124
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4002227081995, 30.654258829427256]
-        },
-        count: 1,
-        time: 933.0337078651686
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40016214991252, 30.65424956393302]
-        },
-        count: 1,
-        time: 934.0449438202247
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40010268469885, 30.65424046568038]
-        },
-        count: 1,
-        time: 935.056179775281
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40006890670857, 30.654235297605293]
-        },
-        count: 1,
-        time: 936.0674157303371
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40008541009175, 30.654237822643722]
-        },
-        count: 1,
-        time: 937.0786516853933
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40017673927157, 30.654251808660693]
-        },
-        count: 1,
-        time: 938.0898876404494
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40027622655654, 30.6542900647746]
-        },
-        count: 1,
-        time: 939.1011235955057
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.400037202106, 30.654393154863893]
-        },
-        count: 1,
-        time: 940.1123595505618
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.39948745711311, 30.655130465471853]
-        },
-        count: 1,
-        time: 941.123595505618
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40215091660765, 30.656862413469145]
-        },
-        count: 1,
-        time: 942.1348314606741
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40694569073477, 30.65873800727568]
-        },
-        count: 1,
-        time: 943.1460674157304
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4093629095217, 30.660257613639693]
-        },
-        count: 1,
-        time: 944.1573033707865
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41411828183793, 30.662377732094136]
-        },
-        count: 1,
-        time: 945.1685393258427
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41840102941042, 30.664061516560665]
-        },
-        count: 1,
-        time: 946.1797752808989
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42274878485172, 30.665701202597734]
-        },
-        count: 1,
-        time: 947.1910112359551
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4284026164401, 30.6679012987858]
-        },
-        count: 1,
-        time: 948.2022471910112
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43267898898178, 30.66963098287582]
-        },
-        count: 1,
-        time: 949.2134831460675
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43561309975932, 30.6707836250546]
-        },
-        count: 1,
-        time: 950.2247191011236
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.441073939599, 30.67280358660418]
-        },
-        count: 1,
-        time: 951.2359550561798
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44548049601136, 30.67430163199314]
-        },
-        count: 1,
-        time: 952.2471910112359
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45023609135374, 30.675760520673556]
-        },
-        count: 1,
-        time: 953.2584269662922
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45526546800646, 30.677429595899653]
-        },
-        count: 1,
-        time: 954.2696629213483
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45522933539601, 30.677361674892907]
-        },
-        count: 1,
-        time: 955.2808988764045
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45415286650201, 30.6769843972564]
-        },
-        count: 1,
-        time: 956.2921348314607
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.460133162813, 30.67923397957088]
-        },
-        count: 1,
-        time: 957.3033707865169
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47090276424416, 30.6831874845077]
-        },
-        count: 1,
-        time: 958.314606741573
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47712927761326, 30.685312116594744]
-        },
-        count: 1,
-        time: 959.3258426966293
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.48002881402182, 30.686109479109348]
-        },
-        count: 1,
-        time: 960.3370786516854
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.48398168676067, 30.68724919386791]
-        },
-        count: 1,
-        time: 961.3483146067416
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.48941958861137, 30.688399915454287]
-        },
-        count: 1,
-        time: 962.3595505617977
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.49457458816049, 30.688633162638112]
-        },
-        count: 1,
-        time: 963.370786516854
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.49862913737032, 30.688464608550873]
-        },
-        count: 1,
-        time: 964.3820224719101
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50166376112143, 30.688279947051548]
-        },
-        count: 1,
-        time: 965.3932584269663
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50404722708075, 30.68834784653725]
-        },
-        count: 1,
-        time: 966.4044943820224
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50550771910576, 30.689108890325517]
-        },
-        count: 1,
-        time: 967.4157303370787
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50377089881992, 30.691145542319845]
-        },
-        count: 1,
-        time: 968.4269662921348
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50192176920528, 30.692220809647413]
-        },
-        count: 1,
-        time: 969.438202247191
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50115962111721, 30.69257930750784]
-        },
-        count: 1,
-        time: 970.4494382022472
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50116463103745, 30.692609532598553]
-        },
-        count: 1,
-        time: 971.4606741573034
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50150041317607, 30.692490542519998]
-        },
-        count: 1,
-        time: 972.4719101123595
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50173362699013, 30.69240022080545]
-        },
-        count: 1,
-        time: 973.4831460674158
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50170967412846, 30.692408984474675]
-        },
-        count: 1,
-        time: 974.4943820224719
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50172163558089, 30.692415045725436]
-        },
-        count: 1,
-        time: 975.5056179775281
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50172190900571, 30.6924414994094]
-        },
-        count: 1,
-        time: 976.5168539325842
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50181731504257, 30.69234401698116]
-        },
-        count: 1,
-        time: 977.5280898876405
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50224056066546, 30.691815771618785]
-        },
-        count: 1,
-        time: 978.5393258426966
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50126795223227, 30.69054298777621]
-        },
-        count: 1,
-        time: 979.5505617977528
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50071118816074, 30.689933451154303]
-        },
-        count: 1,
-        time: 980.561797752809
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.49746150205637, 30.6890804010036]
-        },
-        count: 1,
-        time: 981.5730337078652
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4958496584081, 30.689651412198106]
-        },
-        count: 1,
-        time: 982.5842696629213
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4926387216248, 30.6896476146821]
-        },
-        count: 1,
-        time: 983.5955056179776
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.48921667827555, 30.689419850057565]
-        },
-        count: 1,
-        time: 984.6067415730337
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.48691203801434, 30.68913969049959]
-        },
-        count: 1,
-        time: 985.6179775280899
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.48418917810245, 30.68840290330458]
-        },
-        count: 1,
-        time: 986.629213483146
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.48085712094777, 30.687374401856726]
-        },
-        count: 1,
-        time: 987.6404494382023
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47953240569402, 30.68687158870896]
-        },
-        count: 1,
-        time: 988.6516853932584
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47624057452191, 30.686040532885304]
-        },
-        count: 1,
-        time: 989.6629213483146
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47332026747287, 30.68528970172099]
-        },
-        count: 1,
-        time: 990.6741573033707
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47131244710566, 30.68464808246768]
-        },
-        count: 1,
-        time: 991.685393258427
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46930529815528, 30.68398899398131]
-        },
-        count: 1,
-        time: 992.6966292134831
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46660706454212, 30.683244189449887]
-        },
-        count: 1,
-        time: 993.7078651685393
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4637098357988, 30.68241651527924]
-        },
-        count: 1,
-        time: 994.7191011235955
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46105997005412, 30.68156246542191]
-        },
-        count: 1,
-        time: 995.7303370786517
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45799598950859, 30.681029482390958]
-        },
-        count: 1,
-        time: 996.7415730337078
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45570609350276, 30.68087910387025]
-        },
-        count: 1,
-        time: 997.7528089887641
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45384985779472, 30.68045480599288]
-        },
-        count: 1,
-        time: 998.7640449438202
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45068611671397, 30.679536478118667]
-        },
-        count: 1,
-        time: 999.7752808988764
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4477310047165, 30.67853104738942]
-        },
-        count: 1,
-        time: 1000.7865168539325
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44490527257912, 30.6775654253516]
-        },
-        count: 1,
-        time: 1001.7977528089888
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44277893903823, 30.676867830280578]
-        },
-        count: 1,
-        time: 1002.8089887640449
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44554087085824, 30.677678267319816]
-        },
-        count: 1,
-        time: 1003.8202247191011
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44256576665859, 30.676808549270476]
-        },
-        count: 1,
-        time: 1004.8314606741573
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.434213417163, 30.674367281492366]
-        },
-        count: 1,
-        time: 1005.8426966292135
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43185970811066, 30.673304769901705]
-        },
-        count: 1,
-        time: 1006.8539325842696
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.430219174692, 30.672476024006198]
-        },
-        count: 1,
-        time: 1007.8651685393259
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4268394236164, 30.671218365524723]
-        },
-        count: 1,
-        time: 1008.8764044943821
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42432559974962, 30.669961282615564]
-        },
-        count: 1,
-        time: 1009.8876404494382
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42486469016704, 30.66892633212574]
-        },
-        count: 1,
-        time: 1010.8988764044943
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42422820556573, 30.667942398851544]
-        },
-        count: 1,
-        time: 1011.9101123595506
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42125436228075, 30.666912454277906]
-        },
-        count: 1,
-        time: 1012.9213483146068
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41952416277327, 30.66673314108469]
-        },
-        count: 1,
-        time: 1013.9325842696629
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4159336677712, 30.666693197913652]
-        },
-        count: 1,
-        time: 1014.943820224719
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4132953993766, 30.666580360392935]
-        },
-        count: 1,
-        time: 1015.9550561797753
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4130030330928, 30.666497344863757]
-        },
-        count: 1,
-        time: 1016.9662921348315
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41304133674484, 30.66655250538176]
-        },
-        count: 1,
-        time: 1017.9775280898876
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41296655807253, 30.66654459610571]
-        },
-        count: 1,
-        time: 1018.9887640449438
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.413292, 30.666458]
-        },
-        count: 1,
-        time: 1020.0
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40126700000002, 30.657283000000003]
-        },
-        count: 1,
-        time: 930.0
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40327395515924, 30.65809133644817]
-        },
-        count: 1,
-        time: 931.0112359550562
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4067521585236, 30.659322625278204]
-        },
-        count: 1,
-        time: 932.0224719101124
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41026230675989, 30.66046046382377]
-        },
-        count: 1,
-        time: 933.0337078651686
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41369233669772, 30.66156440003492]
-        },
-        count: 1,
-        time: 934.0449438202247
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41688245085848, 30.66263566399698]
-        },
-        count: 1,
-        time: 935.056179775281
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42011313830014, 30.66375267789377]
-        },
-        count: 1,
-        time: 936.0674157303371
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42289379869415, 30.66474304756934]
-        },
-        count: 1,
-        time: 937.0786516853933
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42688398995531, 30.666233134637604]
-        },
-        count: 1,
-        time: 938.0898876404494
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42983730869993, 30.66748608727678]
-        },
-        count: 1,
-        time: 939.1011235955057
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43252665257407, 30.6686407948778]
-        },
-        count: 1,
-        time: 940.1123595505618
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43563855493362, 30.6698480197295]
-        },
-        count: 1,
-        time: 941.123595505618
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43883935799262, 30.671008724564718]
-        },
-        count: 1,
-        time: 942.1348314606741
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44165860165425, 30.672024186395124]
-        },
-        count: 1,
-        time: 943.1460674157304
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44497652313188, 30.673327164274404]
-        },
-        count: 1,
-        time: 944.1573033707865
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44889289228476, 30.674910027608917]
-        },
-        count: 1,
-        time: 945.1685393258427
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45185524874104, 30.676152304467163]
-        },
-        count: 1,
-        time: 946.1797752808989
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45448499449546, 30.677196255442038]
-        },
-        count: 1,
-        time: 947.1910112359551
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45803635737452, 30.678433559385144]
-        },
-        count: 1,
-        time: 948.2022471910112
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45763055008723, 30.678303915992053]
-        },
-        count: 1,
-        time: 949.2134831460675
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46153695295853, 30.679549530719626]
-        },
-        count: 1,
-        time: 950.2247191011236
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46757762853376, 30.681443904559057]
-        },
-        count: 1,
-        time: 951.2359550561798
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47138965312999, 30.68255917846482]
-        },
-        count: 1,
-        time: 952.2471910112359
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47389842122823, 30.6832251778749]
-        },
-        count: 1,
-        time: 953.2584269662922
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47610343547098, 30.683796353196684]
-        },
-        count: 1,
-        time: 954.2696629213483
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47891163274508, 30.684582223107782]
-        },
-        count: 1,
-        time: 955.2808988764045
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4824813471605, 30.685528931974588]
-        },
-        count: 1,
-        time: 956.2921348314607
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.48660838076248, 30.68640664987727]
-        },
-        count: 1,
-        time: 957.3033707865169
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.49108618434511, 30.686985220005912]
-        },
-        count: 1,
-        time: 958.314606741573
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.49571128965964, 30.6871393989694]
-        },
-        count: 1,
-        time: 959.3258426966293
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50028629186127, 30.686950415729473]
-        },
-        count: 1,
-        time: 960.3370786516854
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50461449400905, 30.686523604943456]
-        },
-        count: 1,
-        time: 961.3483146067416
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.50849919916217, 30.68596430126872]
-        },
-        count: 1,
-        time: 962.3595505617977
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.51174371037968, 30.685377839362616]
-        },
-        count: 1,
-        time: 963.370786516854
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.51415133072068, 30.68486955388247]
-        },
-        count: 1,
-        time: 964.3820224719101
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.5155253632443, 30.68454477948565]
-        },
-        count: 1,
-        time: 965.3932584269663
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.51572074280111, 30.684495049280752]
-        },
-        count: 1,
-        time: 966.4044943820224
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.5173968995992, 30.684043619547737]
-        },
-        count: 1,
-        time: 967.4157303370787
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.52155122234548, 30.68282335238254]
-        },
-        count: 1,
-        time: 968.4269662921348
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.52615231579108, 30.68121748531081]
-        },
-        count: 1,
-        time: 969.438202247191
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.52948934788596, 30.679557492787985]
-        },
-        count: 1,
-        time: 970.4494382022472
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.53173100691171, 30.677863387301294]
-        },
-        count: 1,
-        time: 971.4606741573034
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.53369400055547, 30.676047300125315]
-        },
-        count: 1,
-        time: 972.4719101123595
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.53581752322808, 30.67404061334646]
-        },
-        count: 1,
-        time: 973.4831460674158
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.5378738493146, 30.67184222363421]
-        },
-        count: 1,
-        time: 974.4943820224719
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.53962119055382, 30.669736967423663]
-        },
-        count: 1,
-        time: 975.5056179775281
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.54137114590348, 30.66741338585227]
-        },
-        count: 1,
-        time: 976.5168539325842
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.54307952811594, 30.6648338683307]
-        },
-        count: 1,
-        time: 977.5280898876405
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.54457291269742, 30.66223070014334]
-        },
-        count: 1,
-        time: 978.5393258426966
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.54607091907876, 30.659510626977323]
-        },
-        count: 1,
-        time: 979.5505617977528
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.54767826905574, 30.656618172170568]
-        },
-        count: 1,
-        time: 980.561797752809
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.54937979696129, 30.65354418548595]
-        },
-        count: 1,
-        time: 981.5730337078652
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.55107606694168, 30.650446326119663]
-        },
-        count: 1,
-        time: 982.5842696629213
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.55255020406375, 30.64772625906066]
-        },
-        count: 1,
-        time: 983.5955056179776
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.55400599051218, 30.644919765350476]
-        },
-        count: 1,
-        time: 984.6067415730337
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.55572659408587, 30.641404538962856]
-        },
-        count: 1,
-        time: 985.6179775280899
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.55693503843837, 30.63882378170682]
-        },
-        count: 1,
-        time: 986.629213483146
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.55795798250324, 30.63653210366457]
-        },
-        count: 1,
-        time: 987.6404494382023
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.55929179712946, 30.633528424888535]
-        },
-        count: 1,
-        time: 988.6516853932584
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.56078825834182, 30.63016845965164]
-        },
-        count: 1,
-        time: 989.6629213483146
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.56223750851304, 30.626937653617052]
-        },
-        count: 1,
-        time: 990.6741573033707
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.56344367029398, 30.624291900729705]
-        },
-        count: 1,
-        time: 991.685393258427
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.56443859658417, 30.62220571536846]
-        },
-        count: 1,
-        time: 992.6966292134831
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.56543944379624, 30.62026191460696]
-        },
-        count: 1,
-        time: 993.7078651685393
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.5666639712204, 30.618040323462818]
-        },
-        count: 1,
-        time: 994.7191011235955
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.56765434304313, 30.616305563743833]
-        },
-        count: 1,
-        time: 995.7303370786517
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.5675611404941, 30.616472347802386]
-        },
-        count: 1,
-        time: 996.7415730337078
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.56703803173964, 30.617277911829163]
-        },
-        count: 1,
-        time: 997.7528089887641
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.56647032216532, 30.61808086627329]
-        },
-        count: 1,
-        time: 998.7640449438202
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.56606029838919, 30.618626085658672]
-        },
-        count: 1,
-        time: 999.7752808988764
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.56600965093911, 30.61865970256742]
-        },
-        count: 1,
-        time: 1000.7865168539325
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.56652007034285, 30.61792784958164]
-        },
-        count: 1,
-        time: 1001.7977528089888
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.56779217177683, 30.616178197041275]
-        },
-        count: 1,
-        time: 1002.8089887640449
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.56976732124113, 30.613529142890595]
-        },
-        count: 1,
-        time: 1003.8202247191011
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.57179229571237, 30.6109493503182]
-        },
-        count: 1,
-        time: 1004.8314606741573
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.57314902458955, 30.609497355174497]
-        },
-        count: 1,
-        time: 1005.8426966292135
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.5736009330404, 30.60946737746467]
-        },
-        count: 1,
-        time: 1006.8539325842696
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.57343114264442, 30.610328682483306]
-        },
-        count: 1,
-        time: 1007.8651685393259
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.57294860049831, 30.61150954066444]
-        },
-        count: 1,
-        time: 1008.8764044943821
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.57246091324888, 30.612440981820498]
-        },
-        count: 1,
-        time: 1009.8876404494382
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.57215762404635, 30.61279707496447]
-        },
-        count: 1,
-        time: 1010.8988764044943
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.57201955004517, 30.612681561283296]
-        },
-        count: 1,
-        time: 1011.9101123595506
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.57200616870124, 30.6122421107259]
-        },
-        count: 1,
-        time: 1012.9213483146068
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.57207695747061, 30.611626393241224]
-        },
-        count: 1,
-        time: 1013.9325842696629
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.5721913938092, 30.610982078778182]
-        },
-        count: 1,
-        time: 1014.943820224719
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.57230895517301, 30.610456837285707]
-        },
-        count: 1,
-        time: 1015.9550561797753
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.57238911901803, 30.61019833871272]
-        },
-        count: 1,
-        time: 1016.9662921348315
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.5723913628002, 30.610354253008158]
-        },
-        count: 1,
-        time: 1017.9775280898876
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.57227516397555, 30.61107225012094]
-        },
-        count: 1,
-        time: 1018.9887640449438
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.572, 30.6125]
-        },
-        count: 1,
-        time: 1020.0
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.38100999999997, 30.654346999999998]
-        },
-        count: 1,
-        time: 930.0
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.38074116028562, 30.65417860472462]
-        },
-        count: 1,
-        time: 931.0112359550562
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.37953411877615, 30.653320385269513]
-        },
-        count: 1,
-        time: 932.0224719101124
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3790260251477, 30.6529825294837]
-        },
-        count: 1,
-        time: 933.0337078651686
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.37774527328605, 30.652160618268045]
-        },
-        count: 1,
-        time: 934.0449438202247
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3768067254086, 30.651539160400333]
-        },
-        count: 1,
-        time: 935.056179775281
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.37608351586503, 30.651093413217747]
-        },
-        count: 1,
-        time: 936.0674157303371
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.37466307909709, 30.65031408823355]
-        },
-        count: 1,
-        time: 937.0786516853933
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.37384861654121, 30.649843210667562]
-        },
-        count: 1,
-        time: 938.0898876404494
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.37301392901702, 30.649403818672706]
-        },
-        count: 1,
-        time: 939.1011235955057
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.37230598394414, 30.649032312892462]
-        },
-        count: 1,
-        time: 940.1123595505618
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3708663999949, 30.648198078954323]
-        },
-        count: 1,
-        time: 941.123595505618
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3703362451899, 30.647889091920423]
-        },
-        count: 1,
-        time: 942.1348314606741
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.36929095305737, 30.647267382659994]
-        },
-        count: 1,
-        time: 943.1460674157304
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.36826285083572, 30.646640638354995]
-        },
-        count: 1,
-        time: 944.1573033707865
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.36730159787692, 30.64614691519059]
-        },
-        count: 1,
-        time: 945.1685393258427
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.36646181530517, 30.6456757410376]
-        },
-        count: 1,
-        time: 946.1797752808989
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.36581533258364, 30.645252489748685]
-        },
-        count: 1,
-        time: 947.1910112359551
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.36482960238934, 30.644594739845797]
-        },
-        count: 1,
-        time: 948.2022471910112
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.36393226733168, 30.64396852083204]
-        },
-        count: 1,
-        time: 949.2134831460675
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.36318742409962, 30.643449917111166]
-        },
-        count: 1,
-        time: 950.2247191011236
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3626421667767, 30.643041975276677]
-        },
-        count: 1,
-        time: 951.2359550561798
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.36185606272622, 30.642470489080722]
-        },
-        count: 1,
-        time: 952.2471910112359
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.36091128136945, 30.64179972756353]
-        },
-        count: 1,
-        time: 953.2584269662922
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.36017472172627, 30.641191722257542]
-        },
-        count: 1,
-        time: 954.2696629213483
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35931253304558, 30.640529889349725]
-        },
-        count: 1,
-        time: 955.2808988764045
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35853345936047, 30.639917106669582]
-        },
-        count: 1,
-        time: 956.2921348314607
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35774559283566, 30.639247890762547]
-        },
-        count: 1,
-        time: 957.3033707865169
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35710724050408, 30.63872487816829]
-        },
-        count: 1,
-        time: 958.314606741573
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35629338211935, 30.63801758890025]
-        },
-        count: 1,
-        time: 959.3258426966293
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35548821035476, 30.637284642957923]
-        },
-        count: 1,
-        time: 960.3370786516854
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35497218135933, 30.6368727925534]
-        },
-        count: 1,
-        time: 961.3483146067416
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35427944564103, 30.63627786844615]
-        },
-        count: 1,
-        time: 962.3595505617977
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35330744070086, 30.63547697235766]
-        },
-        count: 1,
-        time: 963.370786516854
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35246238959611, 30.63483072775793]
-        },
-        count: 1,
-        time: 964.3820224719101
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35171506733963, 30.634324851441065]
-        },
-        count: 1,
-        time: 965.3932584269663
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35085228461092, 30.633718463861786]
-        },
-        count: 1,
-        time: 966.4044943820224
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35005777256299, 30.63310978638441]
-        },
-        count: 1,
-        time: 967.4157303370787
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34923407524653, 30.632377247289018]
-        },
-        count: 1,
-        time: 968.4269662921348
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34851778162842, 30.631710735259418]
-        },
-        count: 1,
-        time: 969.438202247191
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34776092473625, 30.63101569254184]
-        },
-        count: 1,
-        time: 970.4494382022472
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34709271023242, 30.630350738678516]
-        },
-        count: 1,
-        time: 971.4606741573034
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34640258344454, 30.629708506686292]
-        },
-        count: 1,
-        time: 972.4719101123595
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34562055800767, 30.629001035164055]
-        },
-        count: 1,
-        time: 973.4831460674158
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34491154777459, 30.62831768432396]
-        },
-        count: 1,
-        time: 974.4943820224719
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34426746973288, 30.62775735710186]
-        },
-        count: 1,
-        time: 975.5056179775281
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34350280198565, 30.62724964415909]
-        },
-        count: 1,
-        time: 976.5168539325842
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34285599812301, 30.62684612545419]
-        },
-        count: 1,
-        time: 977.5280898876405
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3420235841581, 30.626393595581952]
-        },
-        count: 1,
-        time: 978.5393258426966
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.341074819274, 30.62599343070781]
-        },
-        count: 1,
-        time: 979.5505617977528
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34011040414714, 30.62565638152243]
-        },
-        count: 1,
-        time: 980.561797752809
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33924595127854, 30.625361692631508]
-        },
-        count: 1,
-        time: 981.5730337078652
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33822970568691, 30.625090794206734]
-        },
-        count: 1,
-        time: 982.5842696629213
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33782925238214, 30.62499593719455]
-        },
-        count: 1,
-        time: 983.5955056179776
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33664696252114, 30.624703108644926]
-        },
-        count: 1,
-        time: 984.6067415730337
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33571269633774, 30.624442175520677]
-        },
-        count: 1,
-        time: 985.6179775280899
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33495901208016, 30.62408953715093]
-        },
-        count: 1,
-        time: 986.629213483146
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.334450398063, 30.623773841336266]
-        },
-        count: 1,
-        time: 987.6404494382023
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33373994514669, 30.62317644641915]
-        },
-        count: 1,
-        time: 988.6516853932584
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33314532197119, 30.62254260081164]
-        },
-        count: 1,
-        time: 989.6629213483146
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33251300956124, 30.621957811596193]
-        },
-        count: 1,
-        time: 990.6741573033707
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33185490682624, 30.62132511413228]
-        },
-        count: 1,
-        time: 991.685393258427
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33127081202097, 30.620768197468152]
-        },
-        count: 1,
-        time: 992.6966292134831
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33088675243368, 30.620380284454097]
-        },
-        count: 1,
-        time: 993.7078651685393
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33021933865548, 30.619721941368436]
-        },
-        count: 1,
-        time: 994.7191011235955
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3296143873645, 30.61907162770705]
-        },
-        count: 1,
-        time: 995.7303370786517
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32909025875324, 30.618457871951957]
-        },
-        count: 1,
-        time: 996.7415730337078
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32842046159587, 30.61773717427154]
-        },
-        count: 1,
-        time: 997.7528089887641
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32788722903312, 30.61712607655754]
-        },
-        count: 1,
-        time: 998.7640449438202
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32724799280236, 30.616410696647012]
-        },
-        count: 1,
-        time: 999.7752808988764
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32675085399823, 30.61572198538083]
-        },
-        count: 1,
-        time: 1000.7865168539325
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32622249742258, 30.61506850194736]
-        },
-        count: 1,
-        time: 1001.7977528089888
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32558912796998, 30.614362856564934]
-        },
-        count: 1,
-        time: 1002.8089887640449
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32517135981281, 30.61379453545946]
-        },
-        count: 1,
-        time: 1003.8202247191011
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3247057538003, 30.61318600825439]
-        },
-        count: 1,
-        time: 1004.8314606741573
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32417688121461, 30.612405217596926]
-        },
-        count: 1,
-        time: 1005.8426966292135
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32382294545816, 30.611802375959453]
-        },
-        count: 1,
-        time: 1006.8539325842696
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3233607195002, 30.610956022028006]
-        },
-        count: 1,
-        time: 1007.8651685393259
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32292040956753, 30.610190142964864]
-        },
-        count: 1,
-        time: 1008.8764044943821
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32254218257567, 30.609627684326696]
-        },
-        count: 1,
-        time: 1009.8876404494382
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32192613892745, 30.608807673760023]
-        },
-        count: 1,
-        time: 1010.8988764044943
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32150246997237, 30.60834668981257]
-        },
-        count: 1,
-        time: 1011.9101123595506
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32079904798032, 30.60751722712023]
-        },
-        count: 1,
-        time: 1012.9213483146068
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32046186916665, 30.607084531169377]
-        },
-        count: 1,
-        time: 1013.9325842696629
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.31969578178898, 30.60625316918263]
-        },
-        count: 1,
-        time: 1014.943820224719
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.31919577981337, 30.60578899859396]
-        },
-        count: 1,
-        time: 1015.9550561797753
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.31848525637322, 30.605208508449603]
-        },
-        count: 1,
-        time: 1016.9662921348315
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.31781983317605, 30.60448372815389]
-        },
-        count: 1,
-        time: 1017.9775280898876
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.31720795684598, 30.60381741962468]
-        },
-        count: 1,
-        time: 1018.9887640449438
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.316708, 30.603245]
-        },
-        count: 1,
-        time: 1020.0
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47355299999997, 30.68160999999999]
-        },
-        count: 1,
-        time: 930.0
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47304447950317, 30.68158289467493]
-        },
-        count: 1,
-        time: 931.0112359550562
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.472559801574, 30.681482410079276]
-        },
-        count: 1,
-        time: 932.0224719101124
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47195610258974, 30.68129626733773]
-        },
-        count: 1,
-        time: 933.0337078651686
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47132627456922, 30.681078570070536]
-        },
-        count: 1,
-        time: 934.0449438202247
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.47046638436872, 30.680737615323586]
-        },
-        count: 1,
-        time: 935.056179775281
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46951296450733, 30.68034945751029]
-        },
-        count: 1,
-        time: 936.0674157303371
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46857994757372, 30.68003539159402]
-        },
-        count: 1,
-        time: 937.0786516853933
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46759949414131, 30.679733085500402]
-        },
-        count: 1,
-        time: 938.0898876404494
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46647904513456, 30.679367888262277]
-        },
-        count: 1,
-        time: 939.1011235955057
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46547943778666, 30.6789106687664]
-        },
-        count: 1,
-        time: 940.1123595505618
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46461677055537, 30.67835021413272]
-        },
-        count: 1,
-        time: 941.123595505618
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46355303850395, 30.677863023954302]
-        },
-        count: 1,
-        time: 942.1348314606741
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46274727779998, 30.677684485199052]
-        },
-        count: 1,
-        time: 943.1460674157304
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46153016141837, 30.677396952209907]
-        },
-        count: 1,
-        time: 944.1573033707865
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.46073630922675, 30.6770287596815]
-        },
-        count: 1,
-        time: 945.1685393258427
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45983021358322, 30.67634371811058]
-        },
-        count: 1,
-        time: 946.1797752808989
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45902282506866, 30.675668659258623]
-        },
-        count: 1,
-        time: 947.1910112359551
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45821147486954, 30.675216702284793]
-        },
-        count: 1,
-        time: 948.2022471910112
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45728894291558, 30.67490972221948]
-        },
-        count: 1,
-        time: 949.2134831460675
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45623564834699, 30.674628122635927]
-        },
-        count: 1,
-        time: 950.2247191011236
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45518459321514, 30.67430238541168]
-        },
-        count: 1,
-        time: 951.2359550561798
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45429295977905, 30.673948065595606]
-        },
-        count: 1,
-        time: 952.2471910112359
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45323486943187, 30.67352872828387]
-        },
-        count: 1,
-        time: 953.2584269662922
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45236686914471, 30.673350116896177]
-        },
-        count: 1,
-        time: 954.2696629213483
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45104744103283, 30.673484506811413]
-        },
-        count: 1,
-        time: 955.2808988764045
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.45001304622657, 30.673925695684662]
-        },
-        count: 1,
-        time: 956.2921348314607
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4489885483659, 30.67463500454284]
-        },
-        count: 1,
-        time: 957.3033707865169
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44812024632138, 30.67532199284956]
-        },
-        count: 1,
-        time: 958.314606741573
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4470083744464, 30.675931233476764]
-        },
-        count: 1,
-        time: 959.3258426966293
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44594763783788, 30.676149301197167]
-        },
-        count: 1,
-        time: 960.3370786516854
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44507620799759, 30.67621378523956]
-        },
-        count: 1,
-        time: 961.3483146067416
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44399519224676, 30.67622550814084]
-        },
-        count: 1,
-        time: 962.3595505617977
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44292513633275, 30.676150158540025]
-        },
-        count: 1,
-        time: 963.370786516854
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44204849682063, 30.676020784507372]
-        },
-        count: 1,
-        time: 964.3820224719101
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.44089967250316, 30.675822065519846]
-        },
-        count: 1,
-        time: 965.3932584269663
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43979703912721, 30.67559027663969]
-        },
-        count: 1,
-        time: 966.4044943820224
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43881455460999, 30.675286141798203]
-        },
-        count: 1,
-        time: 967.4157303370787
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43787641757454, 30.67497827860238]
-        },
-        count: 1,
-        time: 968.4269662921348
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43685930873406, 30.674599298121443]
-        },
-        count: 1,
-        time: 969.438202247191
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43588703163675, 30.67407542173858]
-        },
-        count: 1,
-        time: 970.4494382022472
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43462809133456, 30.6734596930116]
-        },
-        count: 1,
-        time: 971.4606741573034
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43364326199391, 30.672949913751058]
-        },
-        count: 1,
-        time: 972.4719101123595
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43272701383997, 30.672509766326893]
-        },
-        count: 1,
-        time: 973.4831460674158
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43131640747339, 30.671829346834386]
-        },
-        count: 1,
-        time: 974.4943820224719
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.43028090542919, 30.671224931453025]
-        },
-        count: 1,
-        time: 975.5056179775281
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42924314638172, 30.67047594927404]
-        },
-        count: 1,
-        time: 976.5168539325842
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42839010953249, 30.669923913125707]
-        },
-        count: 1,
-        time: 977.5280898876405
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4272174916515, 30.669290036580975]
-        },
-        count: 1,
-        time: 978.5393258426966
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4262086184952, 30.668851367209708]
-        },
-        count: 1,
-        time: 979.5505617977528
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42508706260791, 30.668386369887557]
-        },
-        count: 1,
-        time: 980.561797752809
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4243175064663, 30.668048896064033]
-        },
-        count: 1,
-        time: 981.5730337078652
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42321790589324, 30.66738473670391]
-        },
-        count: 1,
-        time: 982.5842696629213
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42211313571471, 30.66677435183718]
-        },
-        count: 1,
-        time: 983.5955056179776
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.421163581022, 30.66635001049407]
-        },
-        count: 1,
-        time: 984.6067415730337
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.42002037275222, 30.666060508145957]
-        },
-        count: 1,
-        time: 985.6179775280899
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4191820920646, 30.665806268520562]
-        },
-        count: 1,
-        time: 986.629213483146
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41877529713587, 30.665532970156892]
-        },
-        count: 1,
-        time: 987.6404494382023
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41713456712013, 30.664769452925444]
-        },
-        count: 1,
-        time: 988.6516853932584
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41615778610661, 30.664418418108202]
-        },
-        count: 1,
-        time: 989.6629213483146
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41507040167038, 30.6640594946331]
-        },
-        count: 1,
-        time: 990.6741573033707
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41395697013886, 30.663771236590968]
-        },
-        count: 1,
-        time: 991.685393258427
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41295870360518, 30.66335759939403]
-        },
-        count: 1,
-        time: 992.6966292134831
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41199843244985, 30.662958127168494]
-        },
-        count: 1,
-        time: 993.7078651685393
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41142262849957, 30.662683187238514]
-        },
-        count: 1,
-        time: 994.7191011235955
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.41006992676837, 30.662112676523275]
-        },
-        count: 1,
-        time: 995.7303370786517
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40910691191421, 30.661787232068097]
-        },
-        count: 1,
-        time: 996.7415730337078
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40803112947904, 30.66141302528193]
-        },
-        count: 1,
-        time: 997.7528089887641
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40735893391948, 30.661128770791862]
-        },
-        count: 1,
-        time: 998.7640449438202
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40621622417574, 30.66080411725205]
-        },
-        count: 1,
-        time: 999.7752808988764
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40525574621137, 30.660495573250316]
-        },
-        count: 1,
-        time: 1000.7865168539325
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40445359439744, 30.660140667278416]
-        },
-        count: 1,
-        time: 1001.7977528089888
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40340584230142, 30.659713413986104]
-        },
-        count: 1,
-        time: 1002.8089887640449
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40252495042304, 30.65932137204299]
-        },
-        count: 1,
-        time: 1003.8202247191011
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.4016438386465, 30.65899461695528]
-        },
-        count: 1,
-        time: 1004.8314606741573
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.40069995882902, 30.658776835705282]
-        },
-        count: 1,
-        time: 1005.8426966292135
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.39980304104559, 30.65858679656549]
-        },
-        count: 1,
-        time: 1006.8539325842696
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3988950238225, 30.658394437884436]
-        },
-        count: 1,
-        time: 1007.8651685393259
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3980808581991, 30.6580949743056]
-        },
-        count: 1,
-        time: 1008.8764044943821
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.39709012343025, 30.65777048919734]
-        },
-        count: 1,
-        time: 1009.8876404494382
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.39644325547278, 30.657629028839988]
-        },
-        count: 1,
-        time: 1010.8988764044943
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.39527635308713, 30.65745835915064]
-        },
-        count: 1,
-        time: 1011.9101123595506
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.39421594003991, 30.65734800985792]
-        },
-        count: 1,
-        time: 1012.9213483146068
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.39332799018491, 30.657159207525243]
-        },
-        count: 1,
-        time: 1013.9325842696629
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.39233748633069, 30.65687178798583]
-        },
-        count: 1,
-        time: 1014.943820224719
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3912690626309, 30.656508431703333]
-        },
-        count: 1,
-        time: 1015.9550561797753
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3905435661915, 30.656292854275986]
-        },
-        count: 1,
-        time: 1016.9662921348315
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.38952915465623, 30.656029802594617]
-        },
-        count: 1,
-        time: 1017.9775280898876
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.38839229066804, 30.65582329996898]
-        },
-        count: 1,
-        time: 1018.9887640449438
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.38725, 30.655667]
-        },
-        count: 1,
-        time: 1020.0
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.354387, 30.636622999999997]
-        },
-        count: 1,
-        time: 930.0
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35360797469167, 30.63626728686775]
-        },
-        count: 1,
-        time: 931.0112359550562
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35215163085853, 30.635320934852043]
-        },
-        count: 1,
-        time: 932.0224719101124
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35103055779228, 30.634417818658424]
-        },
-        count: 1,
-        time: 933.0337078651686
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.35012733655826, 30.633499800084945]
-        },
-        count: 1,
-        time: 934.0449438202247
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34897668968375, 30.63245263342471]
-        },
-        count: 1,
-        time: 935.056179775281
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34767589927289, 30.631329890186326]
-        },
-        count: 1,
-        time: 936.0674157303371
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34661134156161, 30.63040726817499]
-        },
-        count: 1,
-        time: 937.0786516853933
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34551237411311, 30.6293125311428]
-        },
-        count: 1,
-        time: 938.0898876404494
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34424501932847, 30.628117137032053]
-        },
-        count: 1,
-        time: 939.1011235955057
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34316226951945, 30.627171418656435]
-        },
-        count: 1,
-        time: 940.1123595505618
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34203083453653, 30.626207617358105]
-        },
-        count: 1,
-        time: 941.123595505618
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.34092230960177, 30.625211182431812]
-        },
-        count: 1,
-        time: 942.1348314606741
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33966043075674, 30.624302967994428]
-        },
-        count: 1,
-        time: 943.1460674157304
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3383120856578, 30.623703780496733]
-        },
-        count: 1,
-        time: 944.1573033707865
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33698539026786, 30.623365366890223]
-        },
-        count: 1,
-        time: 945.1685393258427
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33536326378298, 30.622894763279803]
-        },
-        count: 1,
-        time: 946.1797752808989
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33408618316979, 30.622126509779736]
-        },
-        count: 1,
-        time: 947.1910112359551
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33304764487288, 30.621275548227707]
-        },
-        count: 1,
-        time: 948.2022471910112
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33200614116369, 30.620414841874847]
-        },
-        count: 1,
-        time: 949.2134831460675
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.33103529649513, 30.619650099261072]
-        },
-        count: 1,
-        time: 950.2247191011236
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32974660835563, 30.61861996780882]
-        },
-        count: 1,
-        time: 951.2359550561798
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3286858700667, 30.617766207958827]
-        },
-        count: 1,
-        time: 952.2471910112359
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32757257270003, 30.61681450640458]
-        },
-        count: 1,
-        time: 953.2584269662922
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32657271349444, 30.61577943491396]
-        },
-        count: 1,
-        time: 954.2696629213483
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3257217148664, 30.614753237864367]
-        },
-        count: 1,
-        time: 955.2808988764045
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32479044669869, 30.61355865208573]
-        },
-        count: 1,
-        time: 956.2921348314607
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3238986890933, 30.61231788184453]
-        },
-        count: 1,
-        time: 957.3033707865169
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32307106853986, 30.611138930679598]
-        },
-        count: 1,
-        time: 958.314606741573
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32255326223084, 30.610484706959156]
-        },
-        count: 1,
-        time: 959.3258426966293
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32304394949618, 30.611304317045082]
-        },
-        count: 1,
-        time: 960.3370786516854
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32207179619438, 30.609642612333616]
-        },
-        count: 1,
-        time: 961.3483146067416
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.32001268112998, 30.606357411837973]
-        },
-        count: 1,
-        time: 962.3595505617977
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.31933587743647, 30.605562541544195]
-        },
-        count: 1,
-        time: 963.370786516854
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3185461278009, 30.6047612092844]
-        },
-        count: 1,
-        time: 964.3820224719101
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.31792477790954, 30.604107508930298]
-        },
-        count: 1,
-        time: 965.3932584269663
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3172885452433, 30.603285387595186]
-        },
-        count: 1,
-        time: 966.4044943820224
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3165350724914, 30.60200757270659]
-        },
-        count: 1,
-        time: 967.4157303370787
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.31582631631723, 30.601117356932317]
-        },
-        count: 1,
-        time: 968.4269662921348
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.31473951471368, 30.60002100237353]
-        },
-        count: 1,
-        time: 969.438202247191
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.31357136808883, 30.599050405460286]
-        },
-        count: 1,
-        time: 970.4494382022472
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.31245055156303, 30.598172291659672]
-        },
-        count: 1,
-        time: 971.4606741573034
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.31156050949897, 30.59731659070686]
-        },
-        count: 1,
-        time: 972.4719101123595
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.31042966155863, 30.596370393171853]
-        },
-        count: 1,
-        time: 973.4831460674158
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.30923091121647, 30.595787390981073]
-        },
-        count: 1,
-        time: 974.4943820224719
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.30782221592004, 30.595209317908743]
-        },
-        count: 1,
-        time: 975.5056179775281
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.30633022996946, 30.594503893875654]
-        },
-        count: 1,
-        time: 976.5168539325842
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.30549616905785, 30.593653790368144]
-        },
-        count: 1,
-        time: 977.5280898876405
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.30445923259228, 30.592342228431818]
-        },
-        count: 1,
-        time: 978.5393258426966
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.30374140581198, 30.591275857974207]
-        },
-        count: 1,
-        time: 979.5505617977528
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3029802421695, 30.589855418199967]
-        },
-        count: 1,
-        time: 980.561797752809
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.30241306886481, 30.58863122086885]
-        },
-        count: 1,
-        time: 981.5730337078652
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.30185084217177, 30.58735980348245]
-        },
-        count: 1,
-        time: 982.5842696629213
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.30110840244312, 30.58591972718064]
-        },
-        count: 1,
-        time: 983.5955056179776
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.3003329670976, 30.584588457175332]
-        },
-        count: 1,
-        time: 984.6067415730337
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.29958403221322, 30.58338301315548]
-        },
-        count: 1,
-        time: 985.6179775280899
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.29881866157162, 30.582123065649036]
-        },
-        count: 1,
-        time: 986.629213483146
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.29815243268527, 30.580763713557992]
-        },
-        count: 1,
-        time: 987.6404494382023
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.2974004690755, 30.579564636490524]
-        },
-        count: 1,
-        time: 988.6516853932584
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.29654125139632, 30.578509934924377]
-        },
-        count: 1,
-        time: 989.6629213483146
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.29570276280147, 30.577555440801852]
-        },
-        count: 1,
-        time: 990.6741573033707
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.29450977101665, 30.576330928980724]
-        },
-        count: 1,
-        time: 991.685393258427
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.2936180059057, 30.575423552871158]
-        },
-        count: 1,
-        time: 992.6966292134831
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.29264082683541, 30.574212254051318]
-        },
-        count: 1,
-        time: 993.7078651685393
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.29177946939903, 30.572802782356472]
-        },
-        count: 1,
-        time: 994.7191011235955
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.29126893666565, 30.571601253094354]
-        },
-        count: 1,
-        time: 995.7303370786517
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.29076060947197, 30.569949132609292]
-        },
-        count: 1,
-        time: 996.7415730337078
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.29030441062987, 30.56876425374438]
-        },
-        count: 1,
-        time: 997.7528089887641
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.28969490942919, 30.567278045134916]
-        },
-        count: 1,
-        time: 998.7640449438202
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.28933643864478, 30.566142818269043]
-        },
-        count: 1,
-        time: 999.7752808988764
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.28851074537306, 30.564534548300664]
-        },
-        count: 1,
-        time: 1000.7865168539325
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.2874166310818, 30.563410696208003]
-        },
-        count: 1,
-        time: 1001.7977528089888
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.2860381367738, 30.562424879602883]
-        },
-        count: 1,
-        time: 1002.8089887640449
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.28514139640819, 30.561476960421864]
-        },
-        count: 1,
-        time: 1003.8202247191011
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.2842045070615, 30.56005706851841]
-        },
-        count: 1,
-        time: 1004.8314606741573
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.28349809395652, 30.55876927866255]
-        },
-        count: 1,
-        time: 1005.8426966292135
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.28290017685833, 30.557447099062415]
-        },
-        count: 1,
-        time: 1006.8539325842696
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.28240909811367, 30.556189035470506]
-        },
-        count: 1,
-        time: 1007.8651685393259
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.28196433431422, 30.554710980285222]
-        },
-        count: 1,
-        time: 1008.8764044943821
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.28148855295771, 30.553468858857872]
-        },
-        count: 1,
-        time: 1009.8876404494382
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.280639826108, 30.55216127589052]
-        },
-        count: 1,
-        time: 1010.8988764044943
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.27957808192443, 30.5512152364509]
-        },
-        count: 1,
-        time: 1011.9101123595506
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.2782725419158, 30.550353259031812]
-        },
-        count: 1,
-        time: 1012.9213483146068
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.277317417167, 30.549467301716174]
-        },
-        count: 1,
-        time: 1013.9325842696629
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.27677707138098, 30.548391585033492]
-        },
-        count: 1,
-        time: 1014.943820224719
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.27609770047108, 30.546819698581828]
-        },
-        count: 1,
-        time: 1015.9550561797753
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.27565554481026, 30.54575469120497]
-        },
-        count: 1,
-        time: 1016.9662921348315
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.27522230022599, 30.544469154275223]
-        },
-        count: 1,
-        time: 1017.9775280898876
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.27464530477415, 30.54322293849177]
-        },
-        count: 1,
-        time: 1018.9887640449438
-    },
-    {
-        geometry: {
-            type: 'Point',
-            coordinates: [114.274413, 30.54118]
-        },
-        count: 1,
-        time: 1020.0
-    }
-]
+var dynamicPointData = [{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.28670915124196, 30.541018307059282]
+            },
+            count: 1,
+            time: 1.8181818181818181
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.29874866362651, 30.560915846987555]
+            },
+            count: 1,
+            time: 3.6363636363636362
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.30266994686261, 30.56709911914298]
+            },
+            count: 1,
+            time: 5.454545454545454
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.30371142145832, 30.56854465327448]
+            },
+            count: 1,
+            time: 7.2727272727272725
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.30520026447796, 30.570821469610117]
+            },
+            count: 1,
+            time: 9.09090909090909
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.30657676063655, 30.573116325765163]
+            },
+            count: 1,
+            time: 10.909090909090908
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.30763079859612, 30.574650956442003]
+            },
+            count: 1,
+            time: 12.727272727272727
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.30917608510808, 30.576821778341436]
+            },
+            count: 1,
+            time: 14.545454545454545
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.31019178995594, 30.57830791081327]
+            },
+            count: 1,
+            time: 16.363636363636363
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.3116826210112, 30.580492270100205]
+            },
+            count: 1,
+            time: 18.18181818181818
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.31270802809132, 30.581936922901015]
+            },
+            count: 1,
+            time: 20
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.3142084401933, 30.584121936436667]
+            },
+            count: 1,
+            time: 21.818181818181817
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.31515159797118, 30.58553719835304]
+            },
+            count: 1,
+            time: 23.636363636363637
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.31653870406849, 30.58767729625608]
+            },
+            count: 1,
+            time: 25.454545454545453
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.31785373117931, 30.58983521841755]
+            },
+            count: 1,
+            time: 27.272727272727273
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.31874166682638, 30.591293787010457]
+            },
+            count: 1,
+            time: 29.09090909090909
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.31963350410965, 30.592726024801134]
+            },
+            count: 1,
+            time: 30.909090909090907
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32059602270874, 30.594029777249315]
+            },
+            count: 1,
+            time: 32.72727272727273
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32110776481346, 30.594767394179733]
+            },
+            count: 1,
+            time: 34.54545454545455
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32242812910074, 30.59683100019528]
+            },
+            count: 1,
+            time: 36.36363636363636
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32286788458619, 30.59752312948909]
+            },
+            count: 1,
+            time: 38.18181818181818
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32384911245603, 30.598914390245124]
+            },
+            count: 1,
+            time: 40
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32577923851755, 30.601593011948555]
+            },
+            count: 1,
+            time: 41.81818181818182
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.3267940112536, 30.60291844063902]
+            },
+            count: 1,
+            time: 43.63636363636363
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32779469818078, 30.60422209485703]
+            },
+            count: 1,
+            time: 45.45454545454545
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32877534514657, 30.605521810819166]
+            },
+            count: 1,
+            time: 47.27272727272727
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32973885251461, 30.606725514543534]
+            },
+            count: 1,
+            time: 49.090909090909086
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.39707945566367, 30.654906740932013]
+            },
+            count: 1,
+            time: 1.3157894736842106
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.39808825190038, 30.65533452309884]
+            },
+            count: 1,
+            time: 2.6315789473684212
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.40104989442737, 30.656569364947675]
+            },
+            count: 1,
+            time: 3.947368421052632
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.40306064824568, 30.6573991161311]
+            },
+            count: 1,
+            time: 5.2631578947368425
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.40405279166959, 30.657790085104985]
+            },
+            count: 1,
+            time: 6.578947368421053
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.40570939212435, 30.658437026984167]
+            },
+            count: 1,
+            time: 7.894736842105264
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.40673126749111, 30.658806464076]
+            },
+            count: 1,
+            time: 9.210526315789474
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.4084494529552, 30.659324312565946]
+            },
+            count: 1,
+            time: 10.526315789473685
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.41016507579714, 30.659820665675937]
+            },
+            count: 1,
+            time: 11.842105263157896
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.41223099859376, 30.660436416096257]
+            },
+            count: 1,
+            time: 13.157894736842106
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.413621441857, 30.6608402605605]
+            },
+            count: 1,
+            time: 14.473684210526317
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.41570575254455, 30.661400530131214]
+            },
+            count: 1,
+            time: 15.789473684210527
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.41709398632548, 30.661788832321935]
+            },
+            count: 1,
+            time: 17.10526315789474
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.41848768431915, 30.662201594660658]
+            },
+            count: 1,
+            time: 18.42105263157895
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.41952059256376, 30.66250927572787]
+            },
+            count: 1,
+            time: 19.736842105263158
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.42193653736366, 30.663213635974643]
+            },
+            count: 1,
+            time: 21.05263157894737
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.4229694111423, 30.663524335632307]
+            },
+            count: 1,
+            time: 22.368421052631582
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.42566953235018, 30.664382542580604]
+            },
+            count: 1,
+            time: 23.68421052631579
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.42635173219685, 30.66457484995619]
+            },
+            count: 1,
+            time: 25
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.42804709257922, 30.665096941957483]
+            },
+            count: 1,
+            time: 26.315789473684212
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.4300668478664, 30.66568239656104]
+            },
+            count: 1,
+            time: 27.631578947368425
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.43305822897621, 30.666655119660586]
+            },
+            count: 1,
+            time: 28.947368421052634
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.4350011540472, 30.667378831541438]
+            },
+            count: 1,
+            time: 30.263157894736842
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.43759110999257, 30.66832417449446]
+            },
+            count: 1,
+            time: 31.578947368421055
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.43919239358344, 30.668909298524557]
+            },
+            count: 1,
+            time: 32.89473684210527
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.44110029345524, 30.669687685465128]
+            },
+            count: 1,
+            time: 34.21052631578948
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.44205691518225, 30.670068803598802]
+            },
+            count: 1,
+            time: 35.526315789473685
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.44301134898078, 30.67044545341463]
+            },
+            count: 1,
+            time: 36.8421052631579
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.44462750571742, 30.671060356120233]
+            },
+            count: 1,
+            time: 38.15789473684211
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.44626903200363, 30.67163094856707]
+            },
+            count: 1,
+            time: 39.473684210526315
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.44792802780745, 30.672131985261903]
+            },
+            count: 1,
+            time: 40.78947368421053
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.44892818238834, 30.672431985256605]
+            },
+            count: 1,
+            time: 42.10526315789474
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.45060638080287, 30.67293086741752]
+            },
+            count: 1,
+            time: 43.42105263157895
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.45292545344252, 30.673692760069784]
+            },
+            count: 1,
+            time: 44.736842105263165
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.45486581030295, 30.674444249905708]
+            },
+            count: 1,
+            time: 46.05263157894737
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.45614099266007, 30.675008071058866]
+            },
+            count: 1,
+            time: 47.36842105263158
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.45882525634057, 30.67602862834005]
+            },
+            count: 1,
+            time: 48.684210526315795
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.37796795969388, 30.64626704176283]
+            },
+            count: 1,
+            time: 1.7857142857142858
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.37904684345622, 30.646902265189524]
+            },
+            count: 1,
+            time: 3.5714285714285716
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.38376983167508, 30.64951440627056]
+            },
+            count: 1,
+            time: 5.357142857142858
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.38487567766511, 30.650089918637963]
+            },
+            count: 1,
+            time: 7.142857142857143
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.38721027121511, 30.651303128090372]
+            },
+            count: 1,
+            time: 8.928571428571429
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.38823806603894, 30.651829847684116]
+            },
+            count: 1,
+            time: 10.714285714285715
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.39054710204859, 30.652913932414798]
+            },
+            count: 1,
+            time: 12.5
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.39169465657449, 30.653448410032667]
+            },
+            count: 1,
+            time: 14.285714285714286
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.3939988907257, 30.654462210218494]
+            },
+            count: 1,
+            time: 16.071428571428573
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.39516858780337, 30.654957454079373]
+            },
+            count: 1,
+            time: 17.857142857142858
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.39637743410013, 30.655466887901984]
+            },
+            count: 1,
+            time: 19.642857142857142
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.3987355694117, 30.656529666173938]
+            },
+            count: 1,
+            time: 21.42857142857143
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.39988587070599, 30.65702913871818]
+            },
+            count: 1,
+            time: 23.214285714285715
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.40114153109424, 30.657558006120773]
+            },
+            count: 1,
+            time: 25
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.40351785943403, 30.658436846452258]
+            },
+            count: 1,
+            time: 26.78571428571429
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.40472683967859, 30.65886951156821]
+            },
+            count: 1,
+            time: 28.571428571428573
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.4058592892097, 30.659291858122863]
+            },
+            count: 1,
+            time: 30.357142857142858
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.40837347877662, 30.660122536959957]
+            },
+            count: 1,
+            time: 32.142857142857146
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.40962060477611, 30.660523147035647]
+            },
+            count: 1,
+            time: 33.92857142857143
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.41093361481425, 30.66092975275648]
+            },
+            count: 1,
+            time: 35.714285714285715
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.41345826753684, 30.66168424191443]
+            },
+            count: 1,
+            time: 37.5
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.41719729234313, 30.662747105436694]
+            },
+            count: 1,
+            time: 39.285714285714285
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.41846984368566, 30.663102884134695]
+            },
+            count: 1,
+            time: 41.07142857142858
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.4209235480174, 30.663793902772838]
+            },
+            count: 1,
+            time: 42.85714285714286
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.42213874442828, 30.66414087125052]
+            },
+            count: 1,
+            time: 44.642857142857146
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.42460074416856, 30.664906608681733]
+            },
+            count: 1,
+            time: 46.42857142857143
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.42702491753163, 30.665726746103672]
+            },
+            count: 1,
+            time: 48.214285714285715
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.34341575585621, 30.62417874716421]
+            },
+            count: 1,
+            time: 1.7857142857142858
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.34298875552452, 30.62382750413996]
+            },
+            count: 1,
+            time: 3.5714285714285716
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.3420669779117, 30.62311153588637]
+            },
+            count: 1,
+            time: 5.357142857142858
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.34157320217122, 30.622749822589686]
+            },
+            count: 1,
+            time: 7.142857142857143
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.34062253634063, 30.621983910736002]
+            },
+            count: 1,
+            time: 8.928571428571429
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.33886170468806, 30.62029725492822]
+            },
+            count: 1,
+            time: 10.714285714285715
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.33845961281102, 30.619857016442502]
+            },
+            count: 1,
+            time: 12.5
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.33757464385415, 30.618933856898796]
+            },
+            count: 1,
+            time: 14.285714285714286
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.33669965200725, 30.61803586587138]
+            },
+            count: 1,
+            time: 16.071428571428573
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.33580672899318, 30.617170527254128]
+            },
+            count: 1,
+            time: 17.857142857142858
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.33464609613944, 30.615741546330884]
+            },
+            count: 1,
+            time: 19.642857142857142
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.33412803971805, 30.614015191875527]
+            },
+            count: 1,
+            time: 21.42857142857143
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.33377297016959, 30.61284242729426]
+            },
+            count: 1,
+            time: 23.214285714285715
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.3335311611065, 30.612287302112282]
+            },
+            count: 1,
+            time: 25
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.33210562345853, 30.610377154973545]
+            },
+            count: 1,
+            time: 26.78571428571429
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.33082922744731, 30.609146743973096]
+            },
+            count: 1,
+            time: 28.571428571428573
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32999074995217, 30.608225225281682]
+            },
+            count: 1,
+            time: 30.357142857142858
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.3286781551351, 30.60691092127645]
+            },
+            count: 1,
+            time: 32.142857142857146
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32758872135967, 30.605540243269914]
+            },
+            count: 1,
+            time: 33.92857142857143
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32627396846827, 30.604358295572236]
+            },
+            count: 1,
+            time: 35.714285714285715
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32473661237975, 30.6032215522516]
+            },
+            count: 1,
+            time: 37.5
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32425234191697, 30.602825372518097]
+            },
+            count: 1,
+            time: 39.285714285714285
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32281618685157, 30.601527859598292]
+            },
+            count: 1,
+            time: 41.07142857142858
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32187519581201, 30.600638138653288]
+            },
+            count: 1,
+            time: 42.85714285714286
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.32058319078894, 30.59924780269854]
+            },
+            count: 1,
+            time: 44.642857142857146
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.31975459962676, 30.598260974072474]
+            },
+            count: 1,
+            time: 46.42857142857143
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.31809933517904, 30.59652005323266]
+            },
+            count: 1,
+            time: 48.214285714285715
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.54893763517084, 30.674605599492388]
+            },
+            count: 1,
+            time: 0.8620689655172413
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.54832527971459, 30.675343094192282]
+            },
+            count: 1,
+            time: 1.7241379310344827
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.54766091747284, 30.67623406552505]
+            },
+            count: 1,
+            time: 2.586206896551724
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.54732776681199, 30.676607698771864]
+            },
+            count: 1,
+            time: 3.4482758620689653
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.54674317959156, 30.677302081383036]
+            },
+            count: 1,
+            time: 4.310344827586206
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.54555902887942, 30.6784658477655]
+            },
+            count: 1,
+            time: 5.172413793103448
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.54466800293109, 30.679336580777974]
+            },
+            count: 1,
+            time: 6.0344827586206895
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.54414912911405, 30.679776092024355]
+            },
+            count: 1,
+            time: 6.896551724137931
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.54321696421279, 30.680657278899506]
+            },
+            count: 1,
+            time: 7.758620689655172
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.5420331126506, 30.681695041910547]
+            },
+            count: 1,
+            time: 8.620689655172413
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.5414341141127, 30.682196467988536]
+            },
+            count: 1,
+            time: 9.482758620689655
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.54082104355865, 30.682758359301044]
+            },
+            count: 1,
+            time: 10.344827586206897
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.53955684011277, 30.683739487875652]
+            },
+            count: 1,
+            time: 11.206896551724137
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.53834435072172, 30.684551476448632]
+            },
+            count: 1,
+            time: 12.068965517241379
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.53771904796513, 30.684918148618372]
+            },
+            count: 1,
+            time: 12.93103448275862
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.53673301522244, 30.68546534169294]
+            },
+            count: 1,
+            time: 13.793103448275861
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.53590674211358, 30.685799308032816]
+            },
+            count: 1,
+            time: 14.655172413793103
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.5351472877905, 30.6861389693114]
+            },
+            count: 1,
+            time: 15.517241379310343
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.5343347331412, 30.68657283562953]
+            },
+            count: 1,
+            time: 16.379310344827584
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.53316224076113, 30.68703935226638]
+            },
+            count: 1,
+            time: 17.241379310344826
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.53242845225519, 30.687307195429415]
+            },
+            count: 1,
+            time: 18.103448275862068
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.53110862558827, 30.687773641563698]
+            },
+            count: 1,
+            time: 18.96551724137931
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.53016258912301, 30.688113011210852]
+            },
+            count: 1,
+            time: 19.82758620689655
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.52941547369696, 30.688375544160557]
+            },
+            count: 1,
+            time: 20.689655172413794
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.52766794114136, 30.6889191046879]
+            },
+            count: 1,
+            time: 21.551724137931032
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.52650740518978, 30.68921027459229]
+            },
+            count: 1,
+            time: 22.413793103448274
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.52508054300226, 30.689604188155595]
+            },
+            count: 1,
+            time: 23.275862068965516
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.52399977931285, 30.689841118127372]
+            },
+            count: 1,
+            time: 24.137931034482758
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.52283885397087, 30.690101075715365]
+            },
+            count: 1,
+            time: 25
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.52155772639657, 30.690399898953366]
+            },
+            count: 1,
+            time: 25.86206896551724
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.52008931857318, 30.690807023161007]
+            },
+            count: 1,
+            time: 26.72413793103448
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.51958182027671, 30.690907517044142]
+            },
+            count: 1,
+            time: 27.586206896551722
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.51784705950755, 30.691310676092257]
+            },
+            count: 1,
+            time: 28.448275862068964
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.51693912518243, 30.69151570034281]
+            },
+            count: 1,
+            time: 29.310344827586206
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.51591209030104, 30.69161419079993]
+            },
+            count: 1,
+            time: 30.172413793103445
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.51493711397148, 30.69175458814397]
+            },
+            count: 1,
+            time: 31.034482758620687
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.51408329172048, 30.691779356296788]
+            },
+            count: 1,
+            time: 31.89655172413793
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.51328255056079, 30.69175192437981]
+            },
+            count: 1,
+            time: 32.75862068965517
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.51213453543076, 30.69173951156269]
+            },
+            count: 1,
+            time: 33.62068965517241
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.51142795005023, 30.69171389002223]
+            },
+            count: 1,
+            time: 34.48275862068965
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.51068036709202, 30.69168497014445]
+            },
+            count: 1,
+            time: 35.3448275862069
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.5094525084768, 30.69159937755234]
+            },
+            count: 1,
+            time: 36.206896551724135
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.50877208689883, 30.69156669726581]
+            },
+            count: 1,
+            time: 37.068965517241374
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.5082657982531, 30.69156650883606]
+            },
+            count: 1,
+            time: 37.93103448275862
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.50737133955319, 30.691653630987776]
+            },
+            count: 1,
+            time: 38.79310344827586
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.50673107234036, 30.691671660824007]
+            },
+            count: 1,
+            time: 39.6551724137931
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.50515765376453, 30.691544336466794]
+            },
+            count: 1,
+            time: 40.51724137931034
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.50410458633661, 30.69128874796904]
+            },
+            count: 1,
+            time: 41.37931034482759
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.50301069378757, 30.691004202086354]
+            },
+            count: 1,
+            time: 42.241379310344826
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.50225087800435, 30.69081359839365]
+            },
+            count: 1,
+            time: 43.103448275862064
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.50157112738094, 30.69062437057562]
+            },
+            count: 1,
+            time: 43.96551724137931
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.50087846105191, 30.69044103710358]
+            },
+            count: 1,
+            time: 44.82758620689655
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.50021187463965, 30.690210971464513]
+            },
+            count: 1,
+            time: 45.689655172413794
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.4996792747784, 30.68998266695422]
+            },
+            count: 1,
+            time: 46.55172413793103
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.49898687604231, 30.689688364767143]
+            },
+            count: 1,
+            time: 47.41379310344827
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.4981876351025, 30.68954318579054]
+            },
+            count: 1,
+            time: 48.275862068965516
+        },{
+            geometry: {
+                type: 'Point',
+                coordinates: [114.49789394589014, 30.689487037985327]
+            },
+            count: 1,
+            time: 49.137931034482754
+        },]
