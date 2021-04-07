@@ -1,6 +1,6 @@
 // 五条船的船舶信息
 
-let shipData=[
+let shipInfoData=[
     {
         name:"JIANGHAIYANG2019",
         MMSI:413804393,

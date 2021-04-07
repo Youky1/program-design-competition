@@ -55,6 +55,44 @@
     <div id="mainContainer">
         <!-- 地图页面 -->
         <div class="page" id="mapPage">
+            <!-- 船舶信息显示 -->
+            <div id="shipInfo">
+                <div class="shipInfoLine">
+                    船舶名称：<span id="name"></span>
+                </div>
+                <div class="shipInfoLine">
+                    <div class="shipInfoItem">
+                        MMSI：<span id="MMSI"></span>
+                    </div>
+                    <div class="shipInfoItem">
+                        呼号： <span id="callSign"></span>
+                    </div>
+                </div>
+                <div class="shipInfoLine">
+                    <div class="shipInfoItem">
+                        IMO： <span id="IMO"></span>
+                    </div>
+                    <div class="shipInfoItem">
+                        船舶类型： <span id="type"></span>
+                    </div>
+                </div>
+                <div class="shipInfoLine">
+                    <div class="shipInfoItem">
+                        船长：<span id="length"></span>
+                    </div>
+                    <div class="shipInfoItem">
+                        船宽：<span id="width"></span>
+                    </div>
+                </div>
+                <div class="shipInfoLine">
+                    <div class="shipInfoItem">
+                        状态：<span id="status"></span>
+                    </div>
+                    <div class="shipInfoItem">
+                        吃水：<span id="draft"></span>
+                    </div>
+                </div>
+            </div>
             <!-- 地图容器 -->
             <div id="map"></div>
             <canvas id="canvas" style="display: none;"></canvas>

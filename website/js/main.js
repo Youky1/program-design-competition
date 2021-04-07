@@ -1,13 +1,21 @@
 
 // 全局数据定义************************************************************
 
-var TAIWAN = new BMap.Point(119.25,24.09)           // 显示热力图时地图的中心坐标
-var WUHAN = new BMap.Point(114.45,30.62)            // 显示动态轨迹时地图的中心坐标
+var TAIWAN = new BMap.Point(119.25,24.09)                           // 显示热力图时地图的中心坐标
+var WUHAN = new BMap.Point(114.45,30.62)                            // 显示动态轨迹时地图的中心坐标
 
-var heatLayer = null;                               // 存储热力图的图层
-var dynamicLayer = null;                            // 对象，存放轨迹图层和动点图层
+var heatLayer = null;                                               // 存储热力图的图层
+var dynamicLayer = null;                                            // 对象，存放轨迹图层和动点图层
 
-var lastPage = -1;                                  // 上一次点击的页面序号
+var lastPage = -1;                                                  // 上一次点击的页面序号
+
+var startPoint = [                                                  // 记录五条轨迹的起始点坐标
+    114.54893763517084,
+    114.39707945566367,
+    114.37796795969388,
+    114.34341575585621,
+    114.28670915124196
+]     
 
 // ***********************************************************************
 
@@ -22,7 +30,7 @@ var lastPage = -1;                                  // 上一次点击的页面�
 function handlePageChange(page){
     if(lastPage == page) return;
     lastPage = page;
-    if(page == 2){
+    if(page == 2){  // 显示水域网格化
         $('#mapPage').hide();
         $('#gridPage').show();
     }else{
@@ -30,25 +38,53 @@ function handlePageChange(page){
         $('#mapPage').show();
         if(page == 0){ // 显示热力图
             if(dynamicLayer) {
-                dynamicLayer[0].destroy();
-                dynamicLayer[1].destroy();
+                dynamicLayer[0].hide();
+                dynamicLayer[1].hide();
+                hideShipInfo();
             }
             if(heatLayer){
                 heatLayer.show();
             }
             else{
-                heatLayer = drawHeatLayer(heatData);
+                drawHeatLayer(heatData);
             }  
             map.centerAndZoom(TAIWAN,9)
         }
         else{ // 显示轨迹动图
             if(heatLayer) 
                 heatLayer.hide();
-            dynamicLayer = drawDynamicLayer(dynamicTrajectoryData,dynamicPointData);
+            if(dynamicLayer){
+                dynamicLayer[0].show();
+                dynamicLayer[1].show();
+            }else{
+                drawDynamicLayer(dynamicTrajectoryData,dynamicPointData);
+            }
             map.centerAndZoom(WUHAN,13) 
         }
     }
 }
+
+/**
+ * 显示船舶信息
+ * 船舶信息在ship_info.js中定义
+ * @param {*Number} index 点击的船舶轨迹编号，index∈[1,4]
+ */
+function showShipInfo(index){
+    $('#shipInfo').show();
+    var info = shipInfoData[index];
+    for(var key in info){
+        $(`#${key}`).text(info[key]);
+    }
+}
+
+/**
+ * 取消船舶信息的显示
+ */
+function hideShipInfo(){
+    $('#shipInfo').hide();
+}
+
+// ***********************************************************************
 
 
 // 绘图函数定义*************************************************************
@@ -69,28 +105,30 @@ function drawHeatLayer(heatData){
         // maxOpacity: 1,
         draw: 'heatmap'
     }
-    var mapvLayerHeat = new mapv.baiduMapLayer(map, dataSet, options);
-    return mapvLayerHeat;
+    heatLayer = new mapv.baiduMapLayer(map, dataSet, options);
 }
 
 /**
  * 动态轨迹绘图函数
  * @param {*} trajectory 轨迹数据
  * @param {*} point 动点数据
- * @returns {*Array} 轨迹图的两个图层
  */
 function drawDynamicLayer(trajectory,point){
     /*轨迹图层*/
     var trajectoryDataSet = new mapv.DataSet(trajectory);
     var options = {
         size:50,
-        strokeStyle: 'white',//'rgb(55, 50, 250)',
+        strokeStyle: 'white',
         globalCompositeOperation: 'lighter',
-        shadowColor: 'blue',//'rgb(55, 50, 250)',
+        shadowColor: 'blue',
         shadowBlur: 1.0,
         methods: {
             click: function (item) {
-                console.log(item.geometry.coordinates[0])
+                // 获取点击船舶的编号
+                var index = startPoint.indexOf(item.geometry.coordinates[0][0]);
+                if(index > -1){// 如果是点击了轨迹，则显示船舶信息
+                    showShipInfo(index);
+                }
             }
         },
         lineWidth: 2.0,
@@ -116,7 +154,7 @@ function drawDynamicLayer(trajectory,point){
         draw: 'simple'
     }
     var pointLayer = new mapv.baiduMapLayer(map, pointDataSet, pointOptions);
-    return [trajectoryLayer,pointLayer];
+    dynamicLayer = [trajectoryLayer,pointLayer];
 }
 
 // ***********************************************************************
