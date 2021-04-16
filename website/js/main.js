@@ -1,4 +1,3 @@
-
 // 全局数据定义************************************************************
 
 var TAIWAN = new BMap.Point(119.25,24.09)                           // 显示热力图时地图的中心坐标
@@ -33,6 +32,7 @@ function handlePageChange(page){
     if(page == 2){  // 显示水域网格化
         $('#mapPage').hide();
         $('#gridPage').show();
+        setTimeout(gridInit);
     }else{
         $('#gridPage').hide();
         $('#mapPage').show();
@@ -63,6 +63,8 @@ function handlePageChange(page){
         }
     }
 }
+
+
 
 /**
  * 显示船舶信息
@@ -157,6 +159,143 @@ function drawDynamicLayer(trajectory,point){
     dynamicLayer = [trajectoryLayer,pointLayer];
 }
 
+/**
+ * 水域网格化函数
+ */
+function gridInit(){
+
+    // 声明两个助手函数
+    function renderItem(params, api) {
+        var lngIndex = api.value(0);
+        var latIndex = api.value(1);
+        var pointLeftTop = getCoord(params, api, lngIndex, latIndex);
+        var pointRightBottom = getCoord(params, api, lngIndex + 1, latIndex + 1);
+
+        return {
+            type: 'rect',
+            shape: {
+                x: pointLeftTop[0],
+                y: pointLeftTop[1],
+                width: pointRightBottom[0] - pointLeftTop[0],
+                height: pointRightBottom[1] - pointLeftTop[1]
+            },
+            style: api.style({
+                stroke: 'rgba(0,0,0,0.1)'
+            }),
+            styleEmphasis: api.styleEmphasis()
+        };
+    }
+
+    function getCoord(params, api, lngIndex, latIndex) {
+        var coords = params.context.coords || (params.context.coords = []);
+        var key = lngIndex + '-' + latIndex;
+
+        // bmap returns point in integer, which makes cell width unstable.
+        // So we have to use right bottom point.
+        return coords[key] || (coords[key] = api.coord([
+            +(latExtent[0] + lngIndex * cellSizeCoord[0]).toFixed(6),
+            +(lngExtent[0] + latIndex * cellSizeCoord[1]).toFixed(6)
+        ]));
+    }
+
+    var dom = document.getElementById("gridContainer");
+    var myChart = echarts.init(dom);
+
+    // 不同危险等级的颜色
+    var COLORS = ["#070093", "#1c3fbf", "#1482e5", "#70b4eb", "#b4e0f3", "#ffffff"];
+
+    var lngExtent = [30.682, 30.691];
+    var latExtent = [114.479, 114.488];
+    var cellCount = [30, 30];
+    var cellSizeCoord = [
+        (lngExtent[1] - lngExtent[0]) / cellCount[0],
+        (latExtent[1] - latExtent[0]) / cellCount[1]
+    ];
+
+    // 地图配置
+    var option = {
+        tooltip: {},
+        visualMap: {
+            type: 'piecewise',
+            inverse: false,
+            top: 10,
+            left: 10,
+            pieces: [{
+                value: 0, color: COLORS[0]
+            }, {
+                value: 1, color: COLORS[1]
+            }, {
+                value: 2, color: COLORS[2]
+            }, {
+                value: 3, color: COLORS[3]
+            }, {
+                value: 4, color: COLORS[4]
+            }, {
+                value: 5, color: COLORS[5]
+            }],
+            borderColor: '#ccc',
+            borderWidth: 2,
+            backgroundColor: '#eee',
+            dimension: 2,
+            inRange: {
+                color: COLORS,
+                opacity: 0.3
+            }
+        },
+        series: [
+            {   // 网格化的图层
+                type: 'custom',
+                coordinateSystem: 'bmap',
+                renderItem,
+                animation: false,
+                emphasis: {
+                    itemStyle: {
+                        color: 'yellow'
+                    }
+                },
+                encode: {
+                    tooltip: 2
+                },
+                data: vcro  // 风险值的数据，在vcro.js中定义
+            },
+            {   // 网格中的轨迹图层
+                type: 'lines',
+                coordinateSystem: 'bmap',
+                data: gridTrajectoryData,   // 轨迹的数据，在grid.js中定义
+                polyline: true,
+                lineStyle: {
+                    opacity: 0.6,
+                    width: 1
+                }
+            }
+        ],
+        bmap: {
+            center: [114.49, 30.69],
+            zoom: 15,
+            roam: true,
+            mapStyle: {
+                styleJson: [{
+                    'featureType': 'water',
+                    'elementType': 'all',
+                    'stylers': {
+                        'color': '#d1d1d1'
+                    }
+                }, {
+                    'featureType': 'land',
+                    'elementType': 'all',
+                    'stylers': {
+                        'color': '#f3f3f3'
+                    }
+                }]
+            }
+        }
+    };
+    if (option && typeof option === 'object') {
+        myChart.setOption(option);
+    }
+}
+
+
 // ***********************************************************************
 
 
@@ -167,4 +306,3 @@ var map = new BMap.Map("map", {                     // 创建Map实例
 });
 map.enableScrollWheelZoom(true);                    // 开启鼠标滚轮缩放
 map.centerAndZoom(WUHAN, 7);                        // 初始化地图,设置中心点坐标和地图级别
-
