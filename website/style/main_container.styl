@@ -7,6 +7,34 @@ flex()
     height mainHeight
     #gridPage
         display none
+        #warringTip
+            display none
+            z-index 100
+            position fixed
+            top 10vh
+            right 0
+            height 200px
+            width 400px
+            padding-left 20px
+            background-color #fff
+            color #000
+            font-size 16px
+            h1
+                color #F56C6C
+                border-bottom 1px solid #777
+            div
+                margin-top 10px
+            .warnningInfo
+                font-size 18px
+                font-style italic
+                text-decoration underline
+                
+        #traContainer
+            position  fixed
+            z-index  -1
+            top 10vh
+            height 90vh
+            width 100vw
     .page
         height mainHeight
         #map

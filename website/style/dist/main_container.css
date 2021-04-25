@@ -4,6 +4,38 @@
 #mainContainer #gridPage {
   display: none;
 }
+#mainContainer #gridPage #warringTip {
+  display: none;
+  z-index: 100;
+  position: fixed;
+  top: 10vh;
+  right: 0;
+  height: 200px;
+  width: 400px;
+  padding-left: 20px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+}
+#mainContainer #gridPage #warringTip h1 {
+  color: #f56c6c;
+  border-bottom: 1px solid #777;
+}
+#mainContainer #gridPage #warringTip div {
+  margin-top: 10px;
+}
+#mainContainer #gridPage #warringTip .warnningInfo {
+  font-size: 18px;
+  font-style: italic;
+  text-decoration: underline;
+}
+#mainContainer #gridPage #traContainer {
+  position: fixed;
+  z-index: -1;
+  top: 10vh;
+  height: 90vh;
+  width: 100vw;
+}
 #mainContainer .page {
   height: 90vh;
 }

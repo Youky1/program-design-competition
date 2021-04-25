@@ -10,16 +10,15 @@
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_2452906_sh39xwdmz0d.css">
 
     <!-- 引入自定义样式文件 -->
-    <link rel="stylesheet" href="./style/dist/main.css">
-    <link rel="stylesheet" href="./style/dist/header.css">
-    <link rel="stylesheet" href="./style/dist/main_container.css">
+    <link rel="stylesheet" href="../style/dist/main.css">
+    <link rel="stylesheet" href="../style/dist/header.css">
+    <link rel="stylesheet" href="../style/dist/main_container.css">
 
-    <!-- 引入jQuery -->
-    <script src="./js/lib/jquery.js"></script>
-
-    <!-- 引入mapv -->
-    <script src="./js/lib/getscript.js"></script>
-    <script src="./js/lib/mapv.js"></script>
+    <!-- 加载echarts -->
+    <!-- 注意：第一个url中的TZt8ShU4S3bvkarwHU3Pw6feioFTlAox是自己在百度平台中申请的密匙 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=TZt8ShU4S3bvkarwHU3Pw6feioFTlAox"></script>
+    <script src="../js/lib/echarts.js"></script>
+    <script src="../js/lib/echarts.bmap.js"></script>
 </head>
 <body>
 
@@ -27,7 +26,7 @@
     <header>
         <!-- Logo&Title -->
         <div id="logoContainer">
-            <img id="logo" src="./static/logo.png">
+            <img id="logo" src="../static/logo.png">
             <p id="title">
                 ENRS-智慧船舶航行风险提示系统
                 <span class="iconfont iconxitong" style="font-size: 22px;"></span>
@@ -45,7 +44,7 @@
                 动态轨迹图
             </div>
             <div class="menuItem" onclick="handlePageChange(2)">
-                <span class="iconfont iconwanggehua icon" ></span>
+                <span class="iconfont iconwanggehua icon"></span>
                 水域网格化
             </div>
         </nav>
@@ -99,21 +98,44 @@
         </div>
 
         <!-- 水域网格化页面 -->
-        <div class="page" id="gridPage">3</div>
+        <div class="page" id="gridPage">
+            <div id="gridContainer" style="height: 90vh;opacity: 0.6;z-index: 10;"></div>
+            <div id="traContainer"></div>
+            <div id="warringTip">
+                <h1>碰撞风险预警！</h1>
+                <div>船：<span class="warnningInfo" id="ship1">A</span></div> 
+                <div>与</div>
+                <div>船：<span class="warnningInfo" id="ship2">B</span></div>
+                <div>
+                    在<span class="warnningInfo" id="location">C</span>
+                    处有碰撞风险
+                </div>
+            </div>
+        </div>
     </div>
     
+    <!-- 引入jQuery -->
+    <script src="../js/lib/jquery.js"></script>
+    
+    <!-- 引入mapv -->
+    <script src="../js/lib/getscript.js"></script>
+    <script src="../js/lib/mapv.js"></script>
 
     <!-- 引入热力图数据文件  -->
-    <script src="./js/data/heat/heatData.js"></script>
+    <script src="../js/data/heat/heatData.js"></script>
 
     <!-- 引入动态轨迹数据 -->
-    <script src="./js/data/dynamic/dynamicPointData.js"></script>
-    <script src="./js/data/dynamic/dynamicTrajectoryData.js"></script>
+    <script src="../js/data/dynamic/dynamicPointData.js"></script>
+    <script src="../js/data/dynamic/dynamicTrajectoryData.js"></script>
 
     <!-- 引入船舶信息数据 -->
-    <script src="./js/data/dynamic/ship_info.js"></script>
+    <script src="../js/data/dynamic/ship_info.js"></script>
+
+    <!-- 引入水域网格化的相关数据 -->
+    <script src="../js/data/grid/grid.js"></script>
+    <script src="../js/data/grid/vcro.js"></script>
 
     <!-- 引入自定义js文件 -->
-    <script src="./js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
